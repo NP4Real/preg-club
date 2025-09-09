@@ -1,0 +1,263 @@
+body {
+    font-family: 'Inter', sans-serif; /* Define a fonte principal do site */
+    background-image: url('/assets/img/fut.jpg') ; /* Define a imagem de fundo */
+    color: #212529; /* Define a cor padrão do texto */
+    margin: 0; /* Remove margens padrão do navegador */
+    padding: 0; /* Remove padding padrão do navegador */
+}
+
+.header-container {
+    display: flex; /* Usa flexbox para organizar os itens */
+    justify-content: space-between; /* Espaça os itens igualmente dos lados */
+    align-items: center; /* Centraliza os itens verticalmente */
+    padding: 1.5rem 2rem; /* Espaçamento interno */
+    background: #fff; /* Fundo branco */
+    box-shadow: 0 2px 8px rgba(33, 37, 41, 0.03); /* Sombra leve abaixo do cabeçalho */
+    border-bottom-left-radius: 1rem; /* Bordas arredondadas à esquerda */
+    border-bottom-right-radius: 1rem; /* Bordas arredondadas à direita */
+}
+
+.header-logo-link {
+    display: flex; /* Alinha os itens do link em linha */
+    align-items: center; /* Centraliza verticalmente */
+    text-decoration: none; /* Remove o sublinhado dos links */
+}
+
+.logo-circle {
+    width: 48px; /* Largura do círculo do logo */
+    height: 48px; /* Altura do círculo do logo */
+    border-radius: 50%; /* Deixa o círculo arredondado */
+    background: #007BFF; /* Fundo azul */
+    display: flex; /* Centraliza a imagem no círculo */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    overflow: hidden; /* Esconde partes da imagem que ultrapassam o círculo */
+    border: 4px solid #FF4500; /* Borda laranja */
+    margin-right: 12px; /* Espaço à direita do círculo */
+}
+
+.logo-circle img {
+    width: 100%; /* Imagem ocupa toda a largura do círculo */
+    height: 100%; /* Imagem ocupa toda a altura do círculo */
+    object-fit: cover; /* Garante que a imagem cobre todo o círculo */
+}
+
+.site-name {
+    font-size: 2rem; /* Tamanho grande para o nome do site */
+    font-weight: bold; /* Negrito */
+    color: #007BFF; /* Cor azul */
+    padding: 0.5rem; /* Espaço interno */
+    border-radius: 0.5rem; /* Bordas arredondadas */
+    transition: background 0.3s; /* Transição suave para fundo */
+}
+
+.site-name span {
+    color: #FF4500; /* Cor laranja para o destaque no nome */
+}
+
+.header-nav {
+    display: flex; /* Links da navegação em linha */
+    gap: 1rem; /* Espaço entre os links */
+}
+
+.header-nav a {
+    font-size: 1.125rem; /* Tamanho da fonte dos links */
+    font-weight: 500; /* Peso da fonte */
+    color: #212529; /* Cor do texto */
+    text-decoration: none; /* Remove sublinhado */
+    transition: color 0.3s; /* Transição suave da cor */
+    padding: 0.5rem 1rem; /* Espaço interno nos links */
+    border-radius: 6px; /* Bordas arredondadas dos links */
+}
+
+.header-nav a:hover {
+    color: #FF4500; /* Muda cor do texto ao passar o mouse */
+    background-color: #F8F9FA; /* Muda cor de fundo ao passar o mouse */
+}
+
+.hero {
+    max-width: 650px; /* Largura máxima da seção hero */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    padding: 4rem 2rem 2rem 2rem; /* Espaçamento interno */
+    text-align: center; /* Centraliza o texto */
+}
+
+.hero-title {
+    font-size: 3rem; /* Tamanho grande para o título */
+    font-weight: 800; /* Fonte bem negrito */
+    color: #007BFF; /* Cor azul */
+    line-height: 1.1; /* Espaçamento entre linhas */
+}
+
+.hero-title span {
+    color: #FF4500; /* Cor laranja para destaque no título */
+}
+
+.hero-desc {
+    margin-top: 1rem; /* Espaço acima da descrição */
+    font-size: 1.25rem; /* Tamanho médio da fonte */
+    color: #fff; /* Cor padrão do texto */
+    font-weight: 300; /* Fonte leve */
+}
+
+.cta-btn {
+    margin-top: 2rem; /* Espaço acima do botão */
+    padding: 1rem 2rem; /* Espaçamento interno */
+    background: #FF4500; /* Fundo laranja */
+    color: #fff; /* Texto branco */
+    font-size: 1.125rem; /* Tamanho da fonte */
+    font-weight: 600; /* Fonte forte */
+    border: none; /* Sem borda */
+    border-radius: 2rem; /* Bordas bem arredondadas */
+    box-shadow: 0 4px 16px rgba(255, 69, 0, 0.09); /* Sombra leve laranja */
+    cursor: pointer; /* Cursor de ponteiro */
+    transition: background 0.3s, transform 0.3s; /* Transição suave para cor e escala */
+}
+
+.cta-btn:hover {
+    background: #e03d00; /* Fundo laranja mais escuro ao passar o mouse */
+    transform: scale(1.05); /* Aumenta levemente o botão */
+}
+
+.featured {
+    padding: 2.5rem 2rem; /* Espaçamento interno */
+    background: rgba(255, 255, 255, 0.566); /* Fundo branco translúcido */
+    border-radius: 1rem; /* Bordas arredondadas */
+    max-width: 1200px; /* Largura máxima */
+    margin: 0 auto 2.5rem auto; /* Centraliza e espaça abaixo */
+}
+
+.featured-title {
+    font-size: 2.25rem; /* Tamanho grande para o título */
+    font-weight: bold; /* Negrito */
+    color: #e03d00; /* Cor laranja escuro */
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 3rem; /* Espaço abaixo do título */
+}
+
+.btn {
+    background-color: #1A237E; /* Fundo azul escuro */
+    color: #FFF; /* Texto branco */
+    padding: 0.7rem 1.2rem; /* Espaço interno */
+    border: none; /* Sem borda */
+    border-radius: 8px; /* Bordas arredondadas */
+    text-decoration: none; /* Remove sublinhado */
+    font-weight: bold; /* Negrito */
+    transition: background .2s, color .2s; /* Transição suave */
+    cursor: pointer; /* Cursor de ponteiro */
+}
+
+.btn:hover {
+    background-color: #FF9800; /* Fundo laranja claro ao passar o mouse */
+    color: #1A237E; /* Texto azul escuro ao passar o mouse */
+}
+
+footer {
+    background: #212529; /* Fundo escuro */
+    border-top-left-radius: 1rem; /* Bordas arredondadas no topo à esquerda */
+    border-top-right-radius: 1rem; /* Bordas arredondadas no topo à direita */
+    color: #fff; /* Texto branco */
+    padding: 2.5rem 0; /* Espaço interno */
+    margin-top: 3rem; /* Espaço acima do rodapé */
+    text-align: center; /* Centraliza o texto */
+}
+
+.footer-container {
+    max-width: 1000px; /* Largura máxima do container */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    padding: 0 2rem; /* Espaço interno lateral */
+}
+
+.footer-links {
+    display: flex; /* Links em linha */
+    flex-wrap: wrap; /* Permite quebra para próxima linha */
+    justify-content: center; /* Centraliza os links */
+    gap: 1rem; /* Espaço entre os links */
+}
+
+.footer-links a {
+    color: #fff; /* Texto branco */
+    font-size: 0.95rem; /* Fonte pequena */
+    transition: color 0.3s; /* Transição suave da cor */
+    text-decoration: none; /* Remove sublinhado */
+    padding: 0.5rem 1rem; /* Espaço interno */
+    border-radius: 6px; /* Bordas arredondadas */
+}
+
+.footer-links a:hover {
+    color: #007BFF; /* Texto azul ao passar o mouse */
+    background-color: #333; /* Fundo escuro ao passar o mouse */
+}
+
+.footer-copy {
+    margin-top: 1.5rem; /* Espaço acima do texto */
+    color: #aaa; /* Texto cinza claro */
+    font-size: 0.95rem; /* Fonte pequena */
+}
+
+/* Responsividade para telas menores que 800px */
+@media (max-width: 800px) {
+    .header-container {
+        flex-direction: column; /* Empilha os itens verticalmente */
+        text-align: center; /* Centraliza o texto */
+        gap: 1rem; /* Espaço entre os itens */
+        padding: 1rem; /* Reduz o espaçamento interno */
+    }
+
+    .hero {
+        padding: 3rem 1rem 1rem 1rem; /* Reduz espaçamento interno */
+    }
+
+    .hero-title {
+        font-size: 2.2rem; /* Reduz tamanho do título */
+    }
+
+    .featured-title {
+        font-size: 1.8rem; /* Reduz tamanho do título da seção de destaques */
+    }
+}
+
+/* Responsividade para telas menores que 600px */
+@media (max-width: 600px) {
+    .header-container {
+        padding: 0.5rem; /* Reduz ainda mais o espaçamento interno */
+    }
+
+    .hero {
+        padding: 2rem 0.5rem 1rem 0.5rem; /* Espaço interno menor */
+    }
+
+    .hero-title {
+        font-size: 1.6rem; /* Título menor */
+    }
+
+    .hero-desc {
+        font-size: 1rem; /* Fonte da descrição menor */
+    }
+
+    .featured {
+        padding: 1rem 0.5rem; /* Espaço interno menor */
+    }
+
+    .featured-title {
+        font-size: 1.2rem; /* Título da seção menor */
+        margin-bottom: 1.5rem; /* Espaço abaixo menor */
+    }
+
+    h2 {
+        font-size: 1rem; /* Títulos das notícias menores */
+    }
+
+    p {
+        font-size: 0.95rem; /* Parágrafos menores */
+    }
+
+    .footer-links a {
+        font-size: 0.9rem; /* Fonte dos links menor */
+        padding: 0.3rem 0.5rem; /* Espaço interno menor */
+    }
+
+    .footer-copy {
+        font-size: 0.85rem; /* Fonte do copyright menor */
+    }
+}

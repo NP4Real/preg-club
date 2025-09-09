@@ -1,0 +1,297 @@
+:root {
+    --cor-primaria: #007BFF;
+    --cor-secundaria: #FF4500;
+    --cor-secundaria-hover: #e03d00;
+    --cor-fundo-das-coisas: #fff;
+    --cor-fundo: #f8f9fa;
+    --letras-pretasErodape: #212529;
+}
+
+/* Estilos para o corpo da página */
+body {
+    font-family: 'Inter', sans-serif; /* fonte principal */
+    background-color: var(--cor-fundo); /* define a cor de fundo */
+    color: var(--letras-pretasErodape); /*cor padrão do txt */
+    margin: 0; /* tira a margem padrão */
+    padding: 0; /* tira o padding padrão*/
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos para o contêiner do cabeçalho */
+.cabecalho {
+    display: flex; /* vamo usar o flexbox pra alinhas */
+    justify-content: space-between; /* justificar o txto*/
+    align-items: center; /* Centraliza os itens verticalmente */
+    padding: 1.5rem 2rem; /* Adiciona espaçamento interno */
+    background: var(--cor-fundo-das-coisas); /* Define a cor de fundo */
+    box-shadow: 0 2px 8px rgba(33, 37, 41, 0.03); /* Adiciona uma sombra suave */
+    border-bottom-left-radius: 1rem; /* Borda arredondada no canto inferior esquerdo */
+    border-bottom-right-radius: 1rem; /* Borda arredondada no canto inferior direito */
+}
+
+/* Estilos para o link do logo */
+.logo-link {
+    display: flex; /* Usa flexbox para o logo e o nome do site */
+    align-items: center; /* Centraliza os itens verticalmente */
+    text-decoration: none; /* Remove o sublinhado do link */
+}
+
+/* Estilos para o círculo do logo */
+.logo-circulo {
+    width: 48px; /* Largura fixa */
+    height: 48px; /* Altura fixa */
+    border-radius: 50%; /* Transforma a div em um círculo */
+    background: var(--cor-primaria); /* Cor de fundo do círculo */
+    display: flex; /* Usa flexbox para centralizar a imagem */
+    align-items: center; /* Centraliza a imagem verticalmente */
+    justify-content: center; /* Centraliza a imagem horizontalmente */
+    overflow: hidden; /* Esconde qualquer conteúdo que exceda o círculo */
+    border: 4px solid var(--cor-secundaria); /* Adiciona uma borda colorida */
+    margin-right: 12px; /* Espaço à direita */
+}
+
+/* Estilos para a imagem dentro do círculo do logo */
+.logo-circulo img {
+    width: 100%; /* A imagem ocupa 100% da largura do contêiner */
+    height: 100%; /* A imagem ocupa 100% da altura do contêiner */
+    object-fit: cover; /* Faz a imagem cobrir o espaço sem distorcer, cortando se necessário */
+}
+
+.logo-circulo :hover{
+    animation-name: pulse;
+    animation-duration: 2s;
+}
+
+/* Estilos para o nome do site */
+.nome-site {
+    font-size: 2rem; /* Tamanho da fonte */
+    font-weight: bold; /* Peso da fonte */
+    color: var(--cor-primaria); /* Cor da fonte */
+    padding: 0.5rem; /* Espaçamento interno */
+    border-radius: 0.5rem; /* Borda arredondada */
+    transition: background 0.3s; /* Transição suave para o background */
+}
+.nome-site:hover{
+    animation-name: pulse;
+    animation-duration: 2s;
+}
+
+/* Estilos para a parte colorida do nome do site */
+.nome-site span {
+    color: var(--cor-secundaria); /* Cor do texto */
+}
+
+/* Estilos para a navegação do cabeçalho */
+.menu {
+    display: flex; /* Usa flexbox para os links */
+    gap: 1rem; /* Espaço entre os links */
+}
+
+/* Estilos para os links do menu */
+.menu a {
+    font-size: 1.125rem; /* Tamanho da fonte */
+    font-weight: 500; /* Peso da fonte */
+    color: var(--letras-pretasErodape); /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado */
+    transition: color 0.3s; /* Transição suave para a cor */
+    padding: 0.5rem 1rem; /* Espaçamento interno */
+    border-radius: 6px; /* Borda arredondada */
+}
+
+/* Estilos para os links do menu ao passar o mouse */
+.menu a:hover {
+    color: var(--cor-secundaria); /* Cor da fonte no hover */
+    background-color: var(--cor-fundo); /* Cor de fundo no hover */
+}
+
+/* Estilos para a seção hero */
+.hero {
+    max-width: 650px; /* Largura máxima */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    padding: 4rem 2rem 2rem 2rem; /* Espaçamento interno */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Estilos para o título da seção hero */
+.titulo-hero {
+    font-size: 3rem; /* Tamanho da fonte */
+    font-weight: 800; /* Peso da fonte */
+    color: var(--cor-primaria); /* Cor da fonte */
+    line-height: 1.1; /* Altura da linha */
+}
+
+/* Estilos para a parte colorida do título */
+.titulo-hero span {
+    color: var(--cor-secundaria); /* Cor do texto */
+}
+
+/* Estilos para a descrição da seção hero */
+.descricao-hero {
+    margin-top: 1rem; /* Margem superior */
+    font-size: 1.25rem; /* Tamanho da fonte */
+    color: var(--letras-pretasErodape); /* Cor do texto */
+    font-weight: 300; /* Peso da fonte */
+}
+
+/* Estilos para o botão de chamada para ação */
+.botao-cta {
+    margin-top: 2rem; /* Margem superior */
+    padding: 1rem 2rem; /* Espaçamento interno */
+    background: var(--cor-secundaria); /* Cor de fundo */
+    color: var(--cor-fundo-das-coisas); /* Cor do texto */
+    font-size: 1.125rem; /* Tamanho da fonte */
+    font-weight: 600; /* Peso da fonte */
+    border: none; /* Remove a borda */
+    border-radius: 2rem; /* Borda arredondada */
+    box-shadow: 0 4px 16px rgba(255, 69, 0, 0.09); /* Sombra */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    transition: background 0.3s, transform 0.3s; /* Transições suaves */
+}
+
+/* Estilos para o botão de chamada para ação ao passar o mouse */
+.botao-cta:hover {
+    animation-name: pulse;
+    animation-duration: 2s;
+    background: var(--cor-secundaria-hover); /* Cor de fundo no hover */
+    transform: scale(1.05); /* Aumenta o tamanho no hover */
+}
+
+/* Estilos para a seção de destaques */
+.destaques {
+    padding: 2.5rem 2rem; /* Espaçamento interno */
+    background: var(--cor-fundo-das-coisas); /* Cor de fundo */
+    border-radius: 1rem; /* Borda arredondada */
+    max-width: 1200px; /* Largura máxima */
+    margin: 0 auto 2.5rem auto; /* Centraliza horizontalmente e adiciona margem inferior */
+}
+
+/* Estilos para o título da seção de destaques */
+.titulo-destaques {
+    font-size: 2.25rem; /* Tamanho da fonte */
+    font-weight: bold; /* Peso da fonte */
+    color: var(--letras-pretasErodape); /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 3rem; /* Margem inferior */
+}
+
+/* Estilos para o contêiner dos cartões */
+.cards {
+    display: flex; /* Usa flexbox */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    gap: 2rem; /* Espaço entre os cartões */
+    justify-content: center; /* Centraliza os cartões */
+}
+
+/* Estilos para um cartão individual */
+.card {
+    background-color: var(--cor-fundo-das-coisas); /* Cor de fundo */
+    border-radius: 16px; /* Borda arredondada */
+    box-shadow: 0 4px 16px rgba(26,35,126,0.10); /* Sombra */
+    width: 300px; /* Largura fixa */
+    padding: 1.5rem; /* Espaçamento interno */
+    display: flex; /* Usa flexbox para o conteúdo do cartão */
+    flex-direction: column; /* Organiza os itens em uma coluna */
+    align-items: center; /* Centraliza os itens */
+    transition: box-shadow .2s; /* Transição suave para a sombra */
+}
+
+/* Estilos para o cartão ao passar o mouse */
+.card:hover {
+    animation-name: pulse;
+    animation-duration: 2s;
+    box-shadow: 0 8px 32px rgba(255,152,0,0.18); /* Sombra maior e colorida no hover */
+}
+
+/* Estilos para a imagem do cartão */
+.card img {
+    width: 100%; /* Ocupa 100% da largura do contêiner */
+    height: 170px; /* Altura fixa */
+    object-fit: cover; /* Cobre o espaço sem distorcer */
+    border-radius: 10px; /* Borda arredondada */
+    margin-bottom: 1rem; /* Margem inferior */
+}
+
+/* Estilos para o título do cartão */
+.card h2 {
+    color: #FF9800; /* Cor do texto */
+    font-size: 1.5rem; /* Tamanho da fonte */
+    margin: 0.5rem 0; /* Margem superior e inferior */
+}
+
+/* Estilos para o parágrafo do cartão */
+.card p {
+    color: #1A237E; /* Cor do texto */
+    font-size: 1rem; /* Tamanho da fonte */
+    margin-bottom: 1.5rem; /* Margem inferior */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Estilos para os botões */
+.btn {
+    background-color: var(--cor-primaria); /* Cor de fundo */
+    color: var(--cor-fundo-das-coisas); /* Cor do texto */
+    padding: 0.7rem 1.2rem; /* Espaçamento interno */
+    border: none; /* Remove a borda */
+    border-radius: 8px; /* Borda arredondada */
+    text-decoration: none; /* Remove o sublinhado */
+    font-weight: bold; /* Peso da fonte */
+    transition: background .2s, color .2s; /* Transições suaves */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+
+/* Estilos para os botões ao passar o mouse */
+.btn:hover {
+    background-color: #FF9800; /* Cor de fundo no hover */
+    color: #1A237E; /* Cor do texto no hover */
+}
+
+/* Estilos para o rodapé */
+footer {
+    background: var(--letras-pretasErodape); /* Cor de fundo */
+    border-top-left-radius: 1rem; /* Borda arredondada no canto superior esquerdo */
+    border-top-right-radius: 1rem; /* Borda arredondada no canto superior direito */
+    color: var(--cor-fundo-das-coisas); /* Cor do texto */
+    padding: 2.5rem 0; /* Espaçamento interno */
+    margin-top: 3rem; /* Margem superior */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Estilos para o contêiner do rodapé */
+.rodape {
+    max-width: 1000px; /* Largura máxima */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    padding: 0 2rem; /* Espaçamento interno */
+}
+
+/* Estilos para os links do rodapé */
+.links-rodape {
+    display: flex; /* Usa flexbox */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    justify-content: center; /* Centraliza os links */
+    gap: 1rem; /* Espaço entre os links */
+}
+
+/* Estilos para cada link no rodapé */
+.links-rodape a {
+    color: var(--cor-fundo-das-coisas); /* Cor do texto */
+    font-size: 0.95rem; /* Tamanho da fonte */
+    transition: color 0.3s; /* Transição suave para a cor */
+    text-decoration: none; /* Remove o sublinhado */
+    padding: 0.5rem 1rem; /* Espaçamento interno */
+    border-radius: 6px; /* Borda arredondada */
+}
+
+/* Estilos para os links do rodapé ao passar o mouse */
+.links-rodape a:hover {
+    color: var(--cor-primaria); /* Cor do texto no hover */
+    background-color: #333; /* Cor de fundo no hover */
+}
+
+/* Estilos para o texto de direitos autorais do rodapé */
+.texto-rodape {
+    margin-top: 1.5rem; /* Margem superior */
+    color: #aaa; /* Cor do texto */
+    font-size: 0.95rem; /* Tamanho da fonte */
+}

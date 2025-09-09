@@ -1,0 +1,313 @@
+:root {
+    /* Cores principais */
+    --cor-principal-clara: #007BFF;
+    --cor-principal-escura: #3a68ff;
+    --cor-secundaria: #FF4500;
+    --cor-secundaria-clara: #FF9800;
+    --cor-secundaria-escura: #e03d00;
+
+    /* Cores de texto e fundo */
+    --cor-texto-escuro: #212529;
+    --cor-fundo-claro: #fff;
+    --cor-fundo-neutro: #f8f9fa;
+    --cor-texto-card: #1A237E;
+    --cor-texto-labels: #444;
+    --cor-texto-footer: #aaa;
+    --cor-borda-input: #ccc;
+    --cor-fundo-contato: #2575fc;
+    --cor-fundo-rodape-hover: #333;
+    
+    /* Cores com transparência */
+    --cor-fundo-card-translucido: rgba(255, 255, 255, 0.566);
+}
+
+/* Estilo global do body */
+body {
+    font-family: 'Inter', sans-serif; /* Fonte principal */
+    background-image: url('/assets/img/image.png');
+    color: var(--cor-texto-escuro); /* Cor do texto padrão */
+    margin: 0; /* Remove margem padrão */
+    padding: 0; /* Remove padding padrão */
+}
+
+/* Container do cabeçalho */
+.header-container {
+    display: flex; /* Layout flexível */
+    justify-content: space-between; /* Espaço entre itens */
+    align-items: center; /* Alinhamento vertical centralizado */
+    padding: 1.5rem 2rem; /* Espaçamento interno */
+    background: var(--cor-fundo-claro); /* Fundo branco */
+    box-shadow: 0 2px 8px rgba(33, 37, 41, 0.03); /* Sombra leve */
+    border-bottom-left-radius: 1rem; /* Bordas arredondadas à esquerda */
+    border-bottom-right-radius: 1rem; /* Bordas arredondadas à direita */
+}
+
+/* Link do logo no cabeçalho */
+.header-logo-link {
+    display: flex; /* Layout flexível */
+    align-items: center; /* Centraliza itens verticalmente */
+    text-decoration: none; /* Remove sublinhado */
+}
+
+/* Círculo do logo */
+.logo-circle {
+    width: 48px; /* Largura */
+    height: 48px; /* Altura */
+    border-radius: 50%; /* Formato circular */
+    background: var(--cor-principal-clara); /* Fundo azul */
+    display: flex; /* Layout flexível */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    overflow: hidden; /* Esconde transbordo */
+    border: 4px solid var(--cor-secundaria); /* Borda laranja */
+    margin-right: 12px; /* Espaço à direita */
+}
+
+/* Imagem dentro do círculo do logo */
+.logo-circle img {
+    width: 100%; /* Imagem cobre toda largura */
+    height: 100%; /* Imagem cobre toda altura */
+    object-fit: cover; /* Mantém proporção da imagem */
+}
+
+/* Nome do site no cabeçalho */
+.site-name {
+    font-size: 2rem; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+    color: var(--cor-principal-clara); /* Cor azul */
+    padding: 0.5rem; /* Espaçamento interno */
+    border-radius: 0.5rem; /* Bordas arredondadas */
+    transition: background 0.3s; /* Transição suave de fundo */
+}
+
+/* Parte destacada do nome do site */
+.site-name span {
+    color: var(--cor-secundaria); /* Cor laranja */
+}
+
+/* Navegação do cabeçalho */
+.header-nav {
+    display: flex; /* Layout flexível */
+    gap: 1rem; /* Espaçamento entre links */
+}
+
+/* Links da navegação */
+.header-nav a {
+    font-size: 1.125rem; /* Tamanho da fonte */
+    font-weight: 500; /* Peso da fonte */
+    color: var(--cor-texto-escuro); /* Cor do texto */
+    text-decoration: none; /* Remove sublinhado */
+    transition: color 0.3s; /* Transição de cor */
+    padding: 0.5rem 1rem; /* Espaçamento interno */
+    border-radius: 6px; /* Bordas arredondadas */
+}
+
+/* Efeito hover nos links da navegação */
+.header-nav a:hover {
+    color: var(--cor-secundaria); /* Cor laranja ao passar o mouse */
+    background-color: var(--cor-fundo-neutro); /* Fundo claro ao passar o mouse */
+}
+
+/* Seção de destaque principal (hero) */
+.hero {
+    max-width: 650px; /* Largura máxima */
+    margin: 0 auto; /* Centraliza na tela */
+    padding: 4rem 2rem 2rem 2rem; /* Espaçamento interno */
+    text-align: center; /* Centraliza texto */
+}
+
+/* Título do hero */
+.hero-title {
+    font-size: 3rem; /* Tamanho grande */
+    font-weight: 800; /* Fonte bem negrito */
+    color: var(--cor-principal-clara); /* Cor azul */
+    line-height: 1.1; /* Espaçamento entre linhas */
+}
+
+/* Parte destacada do título hero */
+.hero-title span {
+    color: var(--cor-secundaria); /* Cor laranja */
+}
+
+/* Descrição do hero */
+.hero-desc {
+    margin-top: 1rem; /* Espaço acima */
+    font-size: 1.25rem; /* Tamanho médio */
+    color: var(--cor-texto-escuro); /* Cor escura */
+    font-weight: 300; /* Peso leve */
+    text-shadow: #0e5eae; /* Sombra de texto */
+}
+
+/* Botão de chamada para ação (CTA) */
+.cta-btn {
+    margin-top: 2rem; /* Espaço acima */
+    padding: 1rem 2rem; /* Espaçamento interno */
+    background: var(--cor-secundaria); /* Fundo laranja */
+    color: var(--cor-fundo-claro); /* Texto branco */
+    font-size: 1.125rem; /* Tamanho médio */
+    font-weight: 600; /* Peso forte */
+    border: none; /* Sem borda */
+    border-radius: 2rem; /* Bordas bem arredondadas */
+    box-shadow: 0 4px 16px rgba(255, 69, 0, 0.09); /* Sombra laranja leve */
+    cursor: pointer; /* Cursor de ponteiro */
+    transition: background 0.3s, transform 0.3s; /* Transição suave */
+}
+
+/* Efeito hover no botão CTA */
+.cta-btn:hover {
+    background: var(--cor-secundaria-escura); /* Fundo laranja escuro ao passar o mouse */
+    transform: scale(1.05); /* Aumenta levemente ao passar o mouse */
+}
+
+/* Seção de destaques */
+.featured {
+    padding: 2.5rem 2rem; /* Espaçamento interno */
+    background: var(--cor-fundo-card-translucido); /* Fundo branco translúcido */
+    border-radius: 1rem; /* Bordas arredondadas */
+    max-width: 1200px; /* Largura máxima */
+    margin: 0 auto 2.5rem auto; /* Centraliza e espaça embaixo */
+}
+
+/* Título da seção de destaques */
+.featured-title {
+    font-size: 2.25rem; /* Tamanho grande */
+    font-weight: bold; /* Negrito */
+    color: var(--cor-secundaria-escura); /* Cor laranja escura */
+    text-align: center; /* Centraliza texto */
+    margin-bottom: 3rem; /* Espaço abaixo */
+}
+
+/* Estilo do botão padrão */
+.btn {
+    background-color: var(--cor-azul-escuro); /* Fundo azul escuro */
+    color: var(--cor-fundo-claro); /* Texto branco */
+    padding: 0.7rem 1.2rem; /* Espaçamento interno */
+    border: none; /* Sem borda */
+    border-radius: 8px; /* Bordas arredondadas */
+    text-decoration: none; /* Remove sublinhado */
+    font-weight: bold; /* Negrito */
+    transition: background .2s, color .2s; /* Transição suave */
+    cursor: pointer; /* Cursor de ponteiro */
+}
+
+/* Efeito hover no botão padrão */
+.btn:hover {
+    background-color: var(--cor-secundaria-clara); /* Fundo laranja claro */
+    color: var(--cor-azul-escuro); /* Texto azul escuro */
+}
+
+/* Rodapé da página */
+footer {
+    background: var(--cor-texto-escuro); /* Fundo escuro */
+    border-top-left-radius: 1rem; /* Bordas arredondadas à esquerda */
+    border-top-right-radius: 1rem; /* Bordas arredondadas à direita */
+    color: var(--cor-fundo-claro); /* Texto branco */
+    padding: 2.5rem 0; /* Espaçamento interno */
+    margin-top: 3rem; /* Espaço acima */
+    text-align: center; /* Centraliza texto */
+}
+
+/* Container do rodapé */
+.footer-container {
+    max-width: 1000px; /* Largura máxima */
+    margin: 0 auto; /* Centraliza na tela */
+    padding: 0 2rem; /* Espaçamento lateral */
+}
+
+/* Links do rodapé */
+.footer-links {
+    display: flex; /* Layout flexível */
+    flex-wrap: wrap; /* Quebra de linha se necessário */
+    justify-content: center; /* Centraliza */
+    gap: 1rem; /* Espaço entre links */
+}
+
+/* Estilo dos links do rodapé */
+.footer-links a {
+    color: var(--cor-fundo-claro); /* Texto branco */
+    font-size: 0.95rem; /* Fonte pequena */
+    transition: color 0.3s; /* Transição de cor */
+    text-decoration: none; /* Remove sublinhado */
+    padding: 0.5rem 1rem; /* Espaçamento interno */
+    border-radius: 6px; /* Bordas arredondadas */
+}
+
+/* Efeito hover nos links do rodapé */
+.footer-links a:hover {
+    color: var(--cor-principal-clara); /* Texto azul ao passar o mouse */
+    background-color: var(--cor-fundo-rodape-hover); /* Fundo escuro ao passar o mouse */
+}
+
+/* Texto de direitos autorais do rodapé */
+.footer-copy {
+    margin-top: 1.5rem; /* Espaço acima */
+    color: var(--cor-texto-footer); /* Cor cinza claro */
+    font-size: 0.95rem; /* Tamanho pequeno */
+}
+
+/* Responsividade para telas menores que 800px */
+@media (max-width: 800px) {
+    .header-container {
+        flex-direction: column; /* Empilha itens */
+        text-align: center; /* Centraliza texto */
+        gap: 1rem; /* Espaço entre itens */
+        padding: 1rem; /* Reduz espaçamento */
+    }
+
+    .hero {
+        padding: 3rem 1rem 1rem 1rem; /* Reduz espaçamento */
+    }
+
+    .hero-title {
+        font-size: 2.2rem; /* Reduz tamanho do título */
+    }
+
+    .featured-title {
+        font-size: 1.8rem; /* Reduz tamanho do título de destaques */
+    }
+}
+
+/* Responsividade para telas menores que 600px */
+@media (max-width: 600px) {
+    .header-container {
+        padding: 0.5rem; /* Reduz espaçamento */
+    }
+
+    .hero {
+        padding: 2rem 0.5rem 1rem 0.5rem; /* Reduz espaçamento */
+    }
+
+    .hero-title {
+        font-size: 1.6rem; /* Reduz tamanho do título */
+    }
+
+    .hero-desc {
+        font-size: 1rem; /* Reduz tamanho da descrição */
+    }
+
+    .featured {
+        padding: 1rem 0.5rem; /* Reduz espaçamento */
+    }
+
+    .featured-title {
+        font-size: 1.2rem; /* Reduz tamanho do título de destaques */
+        margin-bottom: 1.5rem; /* Reduz espaço abaixo */
+    }
+
+    h2 {
+        font-size: 1rem; /* Reduz tamanho dos títulos */
+    }
+
+    p {
+        font-size: 0.95rem; /* Reduz tamanho dos parágrafos */
+    }
+
+    .footer-links a {
+        font-size: 0.9rem; /* Reduz tamanho dos links */
+        padding: 0.3rem 0.5rem; /* Reduz espaçamento interno */
+    }
+
+    .footer-copy {
+        font-size: 0.85rem; /* Reduz tamanho do texto de direitos autorais */
+    }
+}

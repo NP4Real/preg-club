@@ -1,0 +1,316 @@
+:root {
+    /* Cores principais */
+    --cor-principal-clara: #007BFF;
+    --cor-principal-escura: #3a68ff;
+    --cor-secundaria: #FF4500;
+    --cor-secundaria-clara: #FF9800;
+    --cor-secundaria-escura: #e03d00;
+    --cor-azul-escuro: #1A237E;
+
+    /* Cores de texto e fundo */
+    --cor-texto-escuro: #212529;
+    --cor-texto-claro: #fff;
+    --cor-fundo-claro: #fff;
+    --cor-fundo-neutro: #f8f9fa;
+    --cor-texto-labels: #444;
+    --cor-texto-footer: #aaa;
+    --cor-borda-input: #ccc;
+    --cor-fundo-contato: #2575fc;
+    --cor-fundo-rodape-hover: #333;
+    
+    /* Cores com transparência */
+    --cor-fundo-card-translucido: rgba(255, 255, 255, 0.566);
+}
+
+/* Estilo global do body */
+body {
+    font-family: 'Inter', sans-serif; /* Define a fonte padrão como Inter ou sans-serif */
+    background-image: url('/assets/img/boquete.jpg'); /* Define uma imagem de fundo */
+    width: 100%; /* Faz o body ocupar toda a largura */
+    height: 100%; /* Faz o body ocupar toda a altura */
+    color: var(--cor-texto-escuro); /* Define cor padrão do texto */
+    margin: 0; /* Remove margem padrão */
+    padding: 0; /* Remove padding padrão */
+}
+
+/* Container principal do cabeçalho */
+.header-container {
+    display: flex; /* Utiliza flexbox para organizar os elementos */
+    justify-content: space-between; /* Espaça os itens igualmente */
+    align-items: center; /* Centraliza verticalmente os itens */
+    padding: 1.5rem 2rem; /* Adiciona espaçamento interno */
+    background: var(--cor-fundo-claro); /* Cor de fundo branca */
+    box-shadow: 0 2px 8px rgba(33, 37, 41, 0.03); /* Adiciona sombra suave */
+    border-bottom-left-radius: 1rem; /* Arredonda o canto inferior esquerdo */
+    border-bottom-right-radius: 1rem; /* Arredonda o canto inferior direito */
+}
+
+/* Link do logo do cabeçalho */
+.header-logo-link {
+    display: flex; /* Layout flexível para alinhar logo e nome */
+    align-items: center; /* Centraliza verticalmente */
+    text-decoration: none; /* Remove sublinhado do link */
+}
+
+/* Círculo do logo */
+.logo-circle {
+    width: 48px; /* Largura fixa */
+    height: 48px; /* Altura fixa */
+    border-radius: 50%; /* Forma circular */
+    background: var(--cor-principal-clara); /* Fundo azul */
+    display: flex; /* Layout flexível para centralizar imagem */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    overflow: hidden; /* Esconde o que ultrapassar o círculo */
+    border: 4px solid var(--cor-secundaria); /* Borda laranja */
+    margin-right: 12px; /* Espaço à direita */
+}
+
+/* Imagem dentro do círculo do logo */
+.logo-circle img {
+    width: 100%; /* Preenche toda a largura do círculo */
+    height: 100%; /* Preenche toda a altura do círculo */
+    object-fit: cover; /* Faz a imagem cobrir o círculo sem distorcer */
+}
+
+/* Nome do site no cabeçalho */
+.site-name {
+    font-size: 2rem; /* Tamanho grande da fonte */
+    font-weight: bold; /* Negrito */
+    color: var(--cor-principal-clara); /* Cor azul */
+    padding: 0.5rem; /* Espaço interno */
+    border-radius: 0.5rem; /* Bordas arredondadas */
+    transition: background 0.3s; /* Transição suave para fundo */
+}
+
+/* Destaque para parte do nome do site */
+.site-name span {
+    color: var(--cor-secundaria); /* Cor laranja */
+}
+
+/* Navegação do cabeçalho */
+.header-nav {
+    display: flex; /* Layout flexível para os links */
+    gap: 1rem; /* Espaçamento entre os links */
+}
+
+/* Links de navegação do cabeçalho */
+.header-nav a {
+    font-size: 1.125rem; /* Tamanho da fonte */
+    font-weight: 500; /* Peso médio da fonte */
+    color: var(--cor-texto-escuro); /* Cor padrão do texto */
+    text-decoration: none; /* Remove sublinhado */
+    transition: color 0.3s; /* Transição suave de cor ao interagir */
+    padding: 0.5rem 1rem; /* Espaço interno nos links */
+    border-radius: 6px; /* Bordas arredondadas */
+}
+
+/* Efeito hover nos links da navegação */
+.header-nav a:hover {
+    color: var(--cor-secundaria); /* Muda cor do texto ao passar o mouse */
+    background-color: var(--cor-fundo-neutro); /* Muda cor de fundo ao passar o mouse */
+}
+
+/* Seção principal de destaque (hero) */
+.hero {
+    max-width: 650px; /* Largura máxima da seção */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    padding: 4rem 2rem 2rem 2rem; /* Espaço interno */
+    text-align: center; /* Centraliza texto */
+}
+
+/* Título grande do hero */
+.hero-title {
+    font-size: 3rem; /* Tamanho grande da fonte */
+    font-weight: 800; /* Fonte bem negrito */
+    color: var(--cor-principal-clara); /* Cor azul */
+    line-height: 1.1; /* Espaçamento entre linhas */
+}
+
+/* Destaque colorido no título hero */
+.hero-title span {
+    color: var(--cor-secundaria); /* Cor laranja */
+}
+
+/* Descrição hero */
+.hero-desc {
+    margin-top: 1rem; /* Espaço acima */
+    font-size: 1.25rem; /* Tamanho médio da fonte */
+    color: var(--cor-texto-claro); /* Cor do texto padrão */
+    font-weight: 300; /* Peso leve da fonte */
+}
+
+/* Botão de chamada para ação */
+.cta-btn {
+    margin-top: 2rem; /* Espaço acima */
+    padding: 1rem 2rem; /* Espaço interno */
+    background: var(--cor-secundaria); /* Fundo laranja */
+    color: var(--cor-fundo-claro); /* Texto branco */
+    font-size: 1.125rem; /* Tamanho médio da fonte */
+    font-weight: 600; /* Fonte forte */
+    border: none; /* Sem borda */
+    border-radius: 2rem; /* Bordas bem arredondadas */
+    box-shadow: 0 4px 16px rgba(255, 69, 0, 0.09); /* Sombra leve laranja */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    transition: background 0.3s, transform 0.3s; /* Transição suave de fundo e escala */
+}
+
+/* Efeito hover no botão de ação */
+.cta-btn:hover {
+    background: var(--cor-secundaria-escura); /* Fundo laranja escuro ao passar o mouse */
+    transform: scale(1.05); /* Aumenta o botão levemente */
+}
+
+/* Seção de destaques */
+.featured {
+    padding: 2.5rem 2rem; /* Espaçamento interno */
+    background: var(--cor-fundo-card-translucido); /* Fundo branco translúcido */
+    border-radius: 1rem; /* Bordas arredondadas */
+    max-width: 1200px; /* Largura máxima */
+    margin: 0 auto 2.5rem auto; /* Centraliza e espaça abaixo */
+}
+
+/* Título da seção de destaques */
+.featured-title {
+    font-size: 2.25rem; /* Tamanho grande */
+    font-weight: bold; /* Negrito */
+    color: var(--cor-secundaria-escura); /* Cor laranja escura */
+    text-align: center; /* Centraliza texto */
+    margin-bottom: 3rem; /* Espaço abaixo do título */
+}
+
+/* Botão padrão */
+.btn {
+    background-color: var(--cor-azul-escuro); /* Fundo azul escuro */
+    color: var(--cor-texto-claro); /* Texto branco */
+    padding: 0.7rem 1.2rem; /* Espaço interno */
+    border: none; /* Sem borda */
+    border-radius: 8px; /* Bordas arredondadas */
+    text-decoration: none; /* Remove sublinhado */
+    font-weight: bold; /* Negrito */
+    transition: background .2s, color .2s; /* Transição suave */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+}
+
+/* Efeito hover no botão padrão */
+.btn:hover {
+    background-color: var(--cor-secundaria-clara); /* Fundo laranja claro */
+    color: var(--cor-azul-escuro); /* Texto azul escuro */
+}
+
+/* Estilos para o rodapé */
+footer {
+    background: var(--cor-texto-escuro);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    color: var(--cor-texto-claro);
+    padding: 2.5rem 0;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Container do rodapé */
+.footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Links do rodapé */
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Estilo dos links do rodapé */
+.footer-links a {
+    color: var(--cor-texto-claro);
+    font-size: 0.95rem;
+    transition: color 0.3s;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+}
+
+/* Efeito hover nos links do rodapé */
+.footer-links a:hover {
+    color: var(--cor-principal-clara);
+    background-color: var(--cor-fundo-rodape-hover);
+}
+
+/* Texto de direitos autorais do rodapé */
+.footer-copy {
+    margin-top: 1.5rem;
+    color: var(--cor-texto-footer);
+    font-size: 0.95rem;
+}
+
+/* Responsividade para telas até 800px */
+@media (max-width: 800px) {
+    .header-container {
+        flex-direction: column; /* Empilha itens verticalmente */
+        text-align: center; /* Centraliza texto */
+        gap: 1rem; /* Espaço entre itens */
+        padding: 1rem; /* Reduz espaçamento interno */
+    }
+
+    .hero {
+        padding: 3rem 1rem 1rem 1rem; /* Reduz espaçamento interno */
+    }
+
+    .hero-title {
+        font-size: 2.2rem; /* Reduz tamanho do título */
+    }
+
+    .featured-title {
+        font-size: 1.8rem; /* Reduz tamanho do título de destaques */
+    }
+}
+
+/* Responsividade para telas até 600px */
+@media (max-width: 600px) {
+    .header-container {
+        padding: 0.5rem; /* Reduz ainda mais o espaçamento interno */
+    }
+
+    .hero {
+        padding: 2rem 0.5rem 1rem 0.5rem; /* Reduz espaçamento interno */
+    }
+
+    .hero-title {
+        font-size: 1.6rem; /* Reduz tamanho do título */
+    }
+
+    .hero-desc {
+        font-size: 1rem; /* Reduz tamanho da descrição */
+    }
+
+    .featured {
+        padding: 1rem 0.5rem; /* Reduz espaçamento interno */
+    }
+
+    .featured-title {
+        font-size: 1.2rem; /* Reduz tamanho do título de destaques */
+        margin-bottom: 1.5rem; /* Reduz espaço abaixo do título */
+    }
+
+    h2 {
+        font-size: 1rem; /* Reduz tamanho dos títulos das notícias */
+    }
+
+    p {
+        font-size: 0.95rem; /* Reduz tamanho dos parágrafos */
+    }
+
+    .footer-links a {
+        font-size: 0.9rem; /* Reduz tamanho dos links do rodapé */
+        padding: 0.3rem 0.5rem; /* Reduz espaço interno dos links */
+    }
+
+    .footer-copy {
+        font-size: 0.85rem; /* Reduz tamanho do texto do copyright */
+    }
+}
