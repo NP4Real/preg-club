@@ -1,3 +1,12 @@
+:root {
+    /* Cores principais */
+    --cor-principal-clara: #007BFF;
+    --cor-principal-escura: #3a68ff;
+    --cor-secundaria: #FF4500;
+    --cor-secundaria-clara: #FF9800;
+    --cor-secundaria-escura: #e03d00;
+}
+
 body {
     font-family: 'Inter', sans-serif; /* Define a fonte principal do site */
     background-image: url('/assets/img/fut.jpg') ; /* Define a imagem de fundo */
@@ -27,12 +36,12 @@ body {
     width: 48px; /* Largura do círculo do logo */
     height: 48px; /* Altura do círculo do logo */
     border-radius: 50%; /* Deixa o círculo arredondado */
-    background: #007BFF; /* Fundo azul */
+    background: var(--cor-principal-clara); /* Fundo azul */
     display: flex; /* Centraliza a imagem no círculo */
     align-items: center; /* Centraliza verticalmente */
     justify-content: center; /* Centraliza horizontalmente */
     overflow: hidden; /* Esconde partes da imagem que ultrapassam o círculo */
-    border: 4px solid #FF4500; /* Borda laranja */
+    border: 4px solid var(--cor-secundaria); /* Borda laranja */
     margin-right: 12px; /* Espaço à direita do círculo */
 }
 
@@ -45,14 +54,14 @@ body {
 .site-name {
     font-size: 2rem; /* Tamanho grande para o nome do site */
     font-weight: bold; /* Negrito */
-    color: #007BFF; /* Cor azul */
+    color: var(--cor-principal-clara); /* Cor azul */
     padding: 0.5rem; /* Espaço interno */
     border-radius: 0.5rem; /* Bordas arredondadas */
     transition: background 0.3s; /* Transição suave para fundo */
 }
 
 .site-name span {
-    color: #FF4500; /* Cor laranja para o destaque no nome */
+    color: var(--cor-secundaria); /* Cor laranja para o destaque no nome */
 }
 
 .header-nav {
@@ -71,7 +80,7 @@ body {
 }
 
 .header-nav a:hover {
-    color: #FF4500; /* Muda cor do texto ao passar o mouse */
+    color: var(--cor-secundaria); /* Muda cor do texto ao passar o mouse */
     background-color: #F8F9FA; /* Muda cor de fundo ao passar o mouse */
 }
 
@@ -85,12 +94,12 @@ body {
 .hero-title {
     font-size: 3rem; /* Tamanho grande para o título */
     font-weight: 800; /* Fonte bem negrito */
-    color: #007BFF; /* Cor azul */
+    color: var(--cor-principal-clara); /* Cor azul */
     line-height: 1.1; /* Espaçamento entre linhas */
 }
 
 .hero-title span {
-    color: #FF4500; /* Cor laranja para destaque no título */
+    color: var(--cor-secundaria); /* Cor laranja para destaque no título */
 }
 
 .hero-desc {
@@ -103,7 +112,7 @@ body {
 .cta-btn {
     margin-top: 2rem; /* Espaço acima do botão */
     padding: 1rem 2rem; /* Espaçamento interno */
-    background: #FF4500; /* Fundo laranja */
+    background: var(--cor-secundaria); /* Fundo laranja */
     color: #fff; /* Texto branco */
     font-size: 1.125rem; /* Tamanho da fonte */
     font-weight: 600; /* Fonte forte */
@@ -115,7 +124,7 @@ body {
 }
 
 .cta-btn:hover {
-    background: #e03d00; /* Fundo laranja mais escuro ao passar o mouse */
+    background: var(--cor-secundaria-escura); /* Fundo laranja mais escuro ao passar o mouse */
     transform: scale(1.05); /* Aumenta levemente o botão */
 }
 
@@ -130,7 +139,7 @@ body {
 .featured-title {
     font-size: 2.25rem; /* Tamanho grande para o título */
     font-weight: bold; /* Negrito */
-    color: #e03d00; /* Cor laranja escuro */
+    color: var(--cor-secundaria-escura); /* Cor laranja escuro */
     text-align: center; /* Centraliza o texto */
     margin-bottom: 3rem; /* Espaço abaixo do título */
 }
@@ -148,7 +157,7 @@ body {
 }
 
 .btn:hover {
-    background-color: #FF9800; /* Fundo laranja claro ao passar o mouse */
+    background-color: var(--cor-secundaria-clara); /* Fundo laranja claro ao passar o mouse */
     color: #1A237E; /* Texto azul escuro ao passar o mouse */
 }
 
@@ -185,7 +194,7 @@ footer {
 }
 
 .footer-links a:hover {
-    color: #007BFF; /* Texto azul ao passar o mouse */
+    color: var(--cor-principal-clara); /* Texto azul ao passar o mouse */
     background-color: #333; /* Fundo escuro ao passar o mouse */
 }
 

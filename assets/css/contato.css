@@ -1,8 +1,16 @@
 /* estilos para o corpo da página */
+
+:root{
+    --cor-primaria: #007BFF;
+    --cor-secundaria: #FF4500;
+    --cor-fundo-das-coias: #fff;
+    --cor-fundo: #f8f9fa;
+    --letras-pretasErodape: #212529;
+}
 body {
     min-height: 100vh; /* garante que o corpo ocupe a tela toda */
-    font-family: Arial, Helvetica, sans-serif; /* define a fonte */
-    background: #f8f9fa; /* cor de fundo */
+    font-family: 'Inter', sans-serif; /* define a fonte */
+    background: var(--cor-fundo); /* cor de fundo */
     background-size: cover; /* imagem de fundo cobre a área */
     margin: 0; /* remove margens */
     display: flex; /* habilita flexbox */
@@ -13,7 +21,7 @@ body {
 .nome-site {
     font-size: 2rem; /* tamanho da fonte */
     font-weight: bold; /* texto em negrito */
-    color: #007BFF; /* cor do texto */
+    color: var(--cor-primaria); /* cor do texto */
     padding: 0.5rem; /* espaçamento interno */
     border-radius: 0.5rem; /* arredonda as bordas */
     transition: background 0.3s; /* transição suave */
@@ -21,7 +29,7 @@ body {
 
 /* estilos para a parte colorida do nome */
 .nome-site span {
-    color: #FF4500; /* cor do texto */
+    color: var(--cor-secundaria) /* cor do texto */
 }
 
 /* estilos para o conteúdo principal, centralizando-o */
@@ -35,24 +43,23 @@ body {
 
 /* estilos para a caixa do formulário de contato */
 .contato {
-    background: #ffffff; /* fundo branco */
+    background: var(--cor-fundo-das-coias); /* fundo branco */
     padding: 40px; /* espaçamento interno */
     width: 350px; /* largura fixa */
-    box-shadow: 0 10px 20px rgba(255, 0, 0, 0.1); /* adiciona uma sombra */
 }
 
 /* estilos para o título do formulário */
 .contato h1 {
     text-align: center; /* centraliza o texto */
     margin-bottom: 20px; /* margem inferior */
-    color: #3a68ff; /* cor do texto */
+    color: var(--cor-primaria); /* cor do texto */
 }
 
 /* estilos para os rótulos dos campos */
 label {
     display: block; /* faz cada label ocupar uma linha */
     margin-top: 15px; /* margem superior */
-    color: #444; /* cor do texto */
+    color: var(--letras-pretas); /* cor do texto */
     font-weight: bold; /* texto em negrito */
 }
 
@@ -71,7 +78,7 @@ textarea {
 /* estilos para o botão de envio */
 button {
     margin-top: 24px; /* margem superior */
-    background: #2575fc; /* cor de fundo do botão */
+    background: var(--cor-primaria); /* cor de fundo do botão */
     color: white; /* cor do texto */
     font-size: 16px; /* tamanho da fonte */
     font-weight: bold; /* texto em negrito */
@@ -88,7 +95,7 @@ button {
     justify-content: space-between; /* alinha com espaço entre */
     align-items: center; /* centraliza verticalmente */
     padding: 1.5rem 2rem; /* espaçamento interno */
-    background: #fff; /* fundo branco */
+    background: var(--cor-fundo-das-coias); /* fundo branco */
     box-shadow: 0 2px 8px rgba(33, 37, 41, 0.03); /* sombra */
     border-bottom-left-radius: 1rem; /* borda arredondada */
     border-bottom-right-radius: 1rem; /* borda arredondada */
@@ -101,29 +108,29 @@ button {
     display: flex; /* habilita flexbox */
     align-items: center; /* centraliza verticalmente */
     text-decoration: none; /* remove sublinhado */
-    color: #3a68ff; /* cor do texto */
+    color: var(--cor-primaria); /* cor do texto */
     font-size: 1.5rem; /* tamanho da fonte */
     font-weight: bold; /* texto em negrito */
 }
 
 /* estilos para a parte colorida do logo */
 .logo-link span {
-    color: #3a68ff; /* cor do texto */
+    color: var(--cor-primaria); /* cor do texto */
 }
 .nome-site span{
-    color: #FF4500;
+    color: var(--cor-secundaria);
 }
 /* estilos para o círculo do logo */
 .logo-circulo {
     width: 48px; /* largura fixa */
     height: 48px; /* altura fixa */
     border-radius: 50%; /* transforma em círculo */
-    background: #007BFF; /* fundo azul */
+    background: var(--cor-primaria); /* fundo azul */
     display: flex; /* habilita flexbox */
     align-items: center; /* centraliza verticalmente */
     justify-content: center; /* centraliza horizontalmente */
     overflow: hidden; /* esconde o excesso */
-    border: 4px solid #FF4500; /* borda laranja */
+    border: 4px solid var(--cor-secundaria); /* borda laranja */
     margin-right: 12px; /* margem à direita */
 }
 
@@ -137,7 +144,7 @@ button {
 /* estilos para os links do menu */
 .menu a {
     text-decoration: none; /* remove sublinhado */
-    color: #333; /* cor do texto */
+    color: var(--letras-pretas); /* cor do texto */
     margin-left: 20px; /* margem à esquerda */
     font-weight: bold; /* texto em negrito */
     transition: color 0.3s ease; /* transição suave */
@@ -145,12 +152,12 @@ button {
 
 /* efeito ao passar o mouse sobre os links */
 .menu a:hover {
-    color: #007BFF; /* muda a cor do texto */
+    color: var(--cor-primaria); /* muda a cor do texto */
 }
 
 /* estilos para o rodapé */
 footer {
-    background: #212529; /* cor de fundo preta */
+    background: var(--letras-pretasErodape); /* cor de fundo preta */
     border-top-left-radius: 1rem; /* borda arredondada */
     border-top-right-radius: 1rem; /* borda arredondada */
     color: #fff; /* cor do texto */
@@ -187,8 +194,7 @@ footer {
 
 /* efeito ao passar o mouse sobre os links do rodapé */
 .links-rodape a:hover {
-    color: #007BFF; /* muda a cor do texto */
-    background-color: #333; /* adiciona fundo cinza */
+    color: var(--cor-primaria) /* muda a cor do texto */
 }
 
 /* estilos para o texto de direitos autorais no rodapé */

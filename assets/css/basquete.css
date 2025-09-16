@@ -6,20 +6,6 @@
     --cor-secundaria-clara: #FF9800;
     --cor-secundaria-escura: #e03d00;
     --cor-azul-escuro: #1A237E;
-
-    /* Cores de texto e fundo */
-    --cor-texto-escuro: #212529;
-    --cor-texto-claro: #fff;
-    --cor-fundo-claro: #fff;
-    --cor-fundo-neutro: #f8f9fa;
-    --cor-texto-labels: #444;
-    --cor-texto-footer: #aaa;
-    --cor-borda-input: #ccc;
-    --cor-fundo-contato: #2575fc;
-    --cor-fundo-rodape-hover: #333;
-    
-    /* Cores com transparência */
-    --cor-fundo-card-translucido: rgba(255, 255, 255, 0.566);
 }
 
 /* Estilo global do body */
@@ -28,7 +14,7 @@ body {
     background-image: url('/assets/img/boquete.jpg'); /* Define uma imagem de fundo */
     width: 100%; /* Faz o body ocupar toda a largura */
     height: 100%; /* Faz o body ocupar toda a altura */
-    color: var(--cor-texto-escuro); /* Define cor padrão do texto */
+    color: #212529; /* Define cor padrão do texto (cor-texto-escuro) */
     margin: 0; /* Remove margem padrão */
     padding: 0; /* Remove padding padrão */
 }
@@ -39,7 +25,7 @@ body {
     justify-content: space-between; /* Espaça os itens igualmente */
     align-items: center; /* Centraliza verticalmente os itens */
     padding: 1.5rem 2rem; /* Adiciona espaçamento interno */
-    background: var(--cor-fundo-claro); /* Cor de fundo branca */
+    background: #fff; /* Cor de fundo branca (cor-fundo-claro) */
     box-shadow: 0 2px 8px rgba(33, 37, 41, 0.03); /* Adiciona sombra suave */
     border-bottom-left-radius: 1rem; /* Arredonda o canto inferior esquerdo */
     border-bottom-right-radius: 1rem; /* Arredonda o canto inferior direito */
@@ -98,7 +84,7 @@ body {
 .header-nav a {
     font-size: 1.125rem; /* Tamanho da fonte */
     font-weight: 500; /* Peso médio da fonte */
-    color: var(--cor-texto-escuro); /* Cor padrão do texto */
+    color: #212529; /* Cor padrão do texto (cor-texto-escuro) */
     text-decoration: none; /* Remove sublinhado */
     transition: color 0.3s; /* Transição suave de cor ao interagir */
     padding: 0.5rem 1rem; /* Espaço interno nos links */
@@ -108,7 +94,7 @@ body {
 /* Efeito hover nos links da navegação */
 .header-nav a:hover {
     color: var(--cor-secundaria); /* Muda cor do texto ao passar o mouse */
-    background-color: var(--cor-fundo-neutro); /* Muda cor de fundo ao passar o mouse */
+    background-color: #f8f9fa; /* Muda cor de fundo ao passar o mouse (cor-fundo-neutro) */
 }
 
 /* Seção principal de destaque (hero) */
@@ -136,7 +122,7 @@ body {
 .hero-desc {
     margin-top: 1rem; /* Espaço acima */
     font-size: 1.25rem; /* Tamanho médio da fonte */
-    color: var(--cor-texto-claro); /* Cor do texto padrão */
+    color: #fff; /* Cor do texto padrão (cor-texto-claro) */
     font-weight: 300; /* Peso leve da fonte */
 }
 
@@ -145,7 +131,7 @@ body {
     margin-top: 2rem; /* Espaço acima */
     padding: 1rem 2rem; /* Espaço interno */
     background: var(--cor-secundaria); /* Fundo laranja */
-    color: var(--cor-fundo-claro); /* Texto branco */
+    color: #fff; /* Texto branco (cor-fundo-claro) */
     font-size: 1.125rem; /* Tamanho médio da fonte */
     font-weight: 600; /* Fonte forte */
     border: none; /* Sem borda */
@@ -164,7 +150,7 @@ body {
 /* Seção de destaques */
 .featured {
     padding: 2.5rem 2rem; /* Espaçamento interno */
-    background: var(--cor-fundo-card-translucido); /* Fundo branco translúcido */
+    background: rgba(255, 255, 255, 0.566); /* Fundo branco translúcido (cor-fundo-card-translucido) */
     border-radius: 1rem; /* Bordas arredondadas */
     max-width: 1200px; /* Largura máxima */
     margin: 0 auto 2.5rem auto; /* Centraliza e espaça abaixo */
@@ -182,7 +168,7 @@ body {
 /* Botão padrão */
 .btn {
     background-color: var(--cor-azul-escuro); /* Fundo azul escuro */
-    color: var(--cor-texto-claro); /* Texto branco */
+    color: #fff; /* Texto branco (cor-texto-claro) */
     padding: 0.7rem 1.2rem; /* Espaço interno */
     border: none; /* Sem borda */
     border-radius: 8px; /* Bordas arredondadas */
@@ -200,10 +186,10 @@ body {
 
 /* Estilos para o rodapé */
 footer {
-    background: var(--cor-texto-escuro);
+    background: #212529; /* Cor do texto escuro (cor-texto-escuro) */
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
-    color: var(--cor-texto-claro);
+    color: #fff; /* Cor do texto claro (cor-texto-claro) */
     padding: 2.5rem 0;
     text-align: center;
     width: 100%;
@@ -218,7 +204,7 @@ footer {
 }
 
 /* Links do rodapé */
-.footer-links {
+.links-rodape {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -226,8 +212,8 @@ footer {
 }
 
 /* Estilo dos links do rodapé */
-.footer-links a {
-    color: var(--cor-texto-claro);
+.links-rodape a {
+    color: #fff; /* Cor do texto claro (cor-texto-claro) */
     font-size: 0.95rem;
     transition: color 0.3s;
     text-decoration: none;
@@ -236,15 +222,15 @@ footer {
 }
 
 /* Efeito hover nos links do rodapé */
-.footer-links a:hover {
+.links-rodape a:hover {
     color: var(--cor-principal-clara);
-    background-color: var(--cor-fundo-rodape-hover);
+    background-color: #333; /* Cor de fundo do rodapé hover (cor-fundo-rodape-hover) */
 }
 
 /* Texto de direitos autorais do rodapé */
 .footer-copy {
     margin-top: 1.5rem;
-    color: var(--cor-texto-footer);
+    color: #aaa; /* Cor do texto do footer (cor-texto-footer) */
     font-size: 0.95rem;
 }
 
@@ -305,7 +291,7 @@ footer {
         font-size: 0.95rem; /* Reduz tamanho dos parágrafos */
     }
 
-    .footer-links a {
+    .links-rodape a {
         font-size: 0.9rem; /* Reduz tamanho dos links do rodapé */
         padding: 0.3rem 0.5rem; /* Reduz espaço interno dos links */
     }
